@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.DashboardControllar">
+   <children>
+      <BorderPane prefHeight="750.0" prefWidth="1000.0">
+         <left>
+            <AnchorPane prefHeight="750.0" prefWidth="240.0" styleClass="right" stylesheets="@css/dash.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="184.0" fitWidth="200.0" layoutX="28.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/imgUse.png" />
+                     </image>
+                  </ImageView>
+                  <VBox layoutX="-1.0" layoutY="347.0" prefHeight="178.0" prefWidth="244.0">
+                     <children>
+                        <Button fx:id="dash_btn" mnemonicParsing="false" onAction="#swichForm" prefHeight="47.0" prefWidth="243.0" styleClass="btn" stylesheets="@css/dash.css" text="    Dashboard">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="addStudent_btn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#swichForm" prefHeight="47.0" prefWidth="246.0" styleClass="btn" stylesheets="@css/dash.css" text="    Add student" />
+                        <Button fx:id="marks_btn" layoutX="10.0" layoutY="57.0" mnemonicParsing="false" onAction="#swichForm" prefHeight="47.0" prefWidth="244.0" styleClass="btn" stylesheets="@css/dash.css" text="    Marks" />
+                     </children>
+                  </VBox>
+                  <Button fx:id="logOut_btn" layoutX="72.0" layoutY="669.0" mnemonicParsing="false" onAction="#setLogOut_btnOnAction" prefHeight="39.0" prefWidth="66.0" styleClass="logout" stylesheets="@css/dash.css" text="Logout">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Line endX="100.0" layoutX="121.0" layoutY="296.0" startX="-100.0" />
+                  <Label fx:id="username_menu" layoutX="47.0" layoutY="246.0" prefHeight="40.0" prefWidth="182.0" text="Wellcome back !!" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="48.0" fitWidth="27.0" layoutX="34.0" layoutY="679.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="dashboard_form" layoutX="40.0" layoutY="40.0" prefHeight="676.0" prefWidth="684.0" styleClass="main" stylesheets="@css/dash.css">
+                     <children>
+                        <AnchorPane prefHeight="187.0" prefWidth="684.0" styleClass="main" stylesheets="@css/dash.css">
+                           <children>
+                              <AnchorPane layoutX="20.0" layoutY="30.0" prefHeight="127.0" prefWidth="200.0" styleClass="card" stylesheets="@css/dash.css">
+                                 <children>
+                                    <ImageView fitHeight="69.0" fitWidth="75.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/education.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="14.0" layoutY="83.0" prefHeight="29.0" prefWidth="123.0" text="Students number ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="dashform_student_num_lable" layoutX="117.0" layoutY="16.0" prefHeight="58.0" prefWidth="60.0" styleClass="counter" stylesheets="@css/dash.css" text="0" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="45.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="242.0" layoutY="30.0" prefHeight="127.0" prefWidth="200.0" styleClass="card" stylesheets="@css/dash.css">
+                                 <children>
+                                    <ImageView fitHeight="69.0" fitWidth="75.0" layoutX="16.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/education.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="16.0" layoutY="83.0" prefHeight="29.0" prefWidth="123.0" text="N Students">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="n_student_num_lable" layoutX="120.0" layoutY="14.0" prefHeight="58.0" prefWidth="60.0" styleClass="counter" stylesheets="@css/dash.css" text="0" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="45.0" />
+                                       </font>
+                                    </Label>
+                                 </children></AnchorPane>
+                              <AnchorPane layoutX="463.0" layoutY="30.0" prefHeight="127.0" prefWidth="200.0" styleClass="card" stylesheets="@css/dash.css">
+                                 <children>
+                                    <ImageView fitHeight="69.0" fitWidth="75.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/education.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="14.0" layoutY="84.0" prefHeight="29.0" prefWidth="123.0" text="L Students ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="l_student_num_lable" layoutX="118.0" layoutY="15.0" prefHeight="58.0" prefWidth="60.0" styleClass="counter" stylesheets="@css/dash.css" text="0" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="45.0" />
+                                       </font>
+                                    </Label>
+                                 </children></AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="addstudent_form" layoutX="40.0" layoutY="40.0" prefHeight="676.0" prefWidth="684.0" styleClass="textfield" stylesheets="@css/dash.css" translateX="1.0" translateY="1.0" translateZ="1.0" visible="false">
+                     <children>
+                        <AnchorPane layoutX="5.0" layoutY="6.0" prefHeight="404.0" prefWidth="673.0" styleClass="main" stylesheets="@css/dash.css">
+                           <children>
+                              <TableView fx:id="addstudent_table" layoutX="7.0" layoutY="71.0" onMouseClicked="#addStundentSelect" prefHeight="331.0" prefWidth="664.0">
+                                <columns>
+                                  <TableColumn fx:id="addstudent_col_neptun" prefWidth="84.0" text="Neptun Kod" />
+                                  <TableColumn fx:id="addstudent_col_first_name" prefWidth="71.0" text="First name" />
+                                    <TableColumn fx:id="addstudent_col_last_name" prefWidth="75.0" text="Last name" />
+                                    <TableColumn fx:id="addstudent_col_gender" prefWidth="54.0" text="Gender" />
+                                    <TableColumn fx:id="addstudent_col_gmail" prefWidth="214.0" text="Gmail address" />
+                                    <TableColumn fx:id="addstudent_col_missing" prefWidth="88.0" text="missing" />
+                                    <TableColumn fx:id="addstudent_col_type" prefWidth="84.0" text="Type" />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="addstudent_search" layoutX="78.0" layoutY="17.0" onKeyTyped="#addstudent_search" prefHeight="37.0" prefWidth="365.0" promptText="Search" styleClass="search" stylesheets="@css/dash.css">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <ImageView fitHeight="44.0" fitWidth="43.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/searching.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="7.0" layoutY="426.0" text="Neptun Kod: ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="addstudent_neptun" layoutX="89.0" layoutY="424.0" styleClass="textfield" stylesheets="@css/dash.css" />
+                        <Label layoutX="7.0" layoutY="470.0" text="First name: ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="addstudent_first_name" layoutX="89.0" layoutY="468.0" styleClass="textfield" stylesheets="@css/dash.css" />
+                        <Label layoutX="8.0" layoutY="512.0" text="Last name: ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="addstudent_last_name" layoutX="89.0" layoutY="510.0" styleClass="textfield" stylesheets="@css/dash.css" />
+                        <Label layoutX="8.0" layoutY="554.0" text="Gender:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="addstudent_gender" layoutX="89.0" layoutY="552.0" onAction="#addGenderList" prefWidth="150.0" promptText="Choose" styleClass="textfield" stylesheets="@css/dash.css" />
+                        <Label layoutX="272.0" layoutY="426.0" text="Gmail address: ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="addstudent_gmail" layoutX="367.0" layoutY="424.0" prefHeight="25.0" prefWidth="196.0" styleClass="textfield" stylesheets="@css/dash.css" />
+                        <Label layoutX="272.0" layoutY="470.0" text="Type:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="addstudent_type" layoutX="367.0" layoutY="468.0" onAction="#addTypeList" prefWidth="150.0" promptText="Choose" styleClass="textfield" stylesheets="@css/dash.css" />
+                        <Button fx:id="addstudent_clear_btn" layoutX="239.0" layoutY="610.0" mnemonicParsing="false" onAction="#setAddstudent_clear_btnOnAction" prefHeight="35.0" prefWidth="68.0" styleClass="clear-btn" stylesheets="@css/dash.css" text="Clear" />
+                        <Button fx:id="addstudent_delete_btn" layoutX="321.0" layoutY="610.0" mnemonicParsing="false" onAction="#setAddstudent_delete_btnOnAction" prefHeight="35.0" prefWidth="68.0" styleClass="delete-btn" stylesheets="@css/dash.css" text="Delete" />
+                        <Button fx:id="addstudent_update_btn" layoutX="419.0" layoutY="610.0" mnemonicParsing="false" onAction="#setAddstudent_update_btnOnAction" prefHeight="35.0" prefWidth="68.0" styleClass="update-btn" stylesheets="@css/dash.css" text="Update" />
+                        <Button fx:id="addstudent_add_btn" layoutX="501.0" layoutY="610.0" mnemonicParsing="false" onAction="#setAddStudent_btnOnAction" prefHeight="35.0" prefWidth="68.0" styleClass="add-btn" stylesheets="@css/dash.css" text="Add" />
+                        <Label layoutX="272.0" layoutY="525.0" text="missing: ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="addstudent_missing" layoutX="367.0" layoutY="523.0" prefHeight="25.0" prefWidth="47.0" styleClass="textfield" stylesheets="@css/dash.css" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="marks_form" layoutX="40.0" layoutY="40.0" prefHeight="676.0" prefWidth="684.0" styleClass="main" stylesheets="@css/dash.css" visible="false">
+                     <children>
+                        <AnchorPane layoutX="8.0" layoutY="22.0" prefHeight="445.0" prefWidth="313.0">
+                           <children>
+                              <Label layoutX="22.0" layoutY="42.0" text="Neptun kod:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="mark_neptun" layoutX="113.0" layoutY="40.0" prefHeight="25.0" prefWidth="158.0" styleClass="textfield" stylesheets="@css/dash.css" />
+                              <Label layoutX="22.0" layoutY="90.0" text="First name:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="22.0" layoutY="124.0" text="Last name:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="mark_name_first" layoutX="99.0" layoutY="87.0" prefHeight="25.0" prefWidth="88.0" styleClass="label-info" stylesheets="@css/dash.css" />
+                              <Label fx:id="mark_name_last" layoutX="99.0" layoutY="126.0" prefHeight="25.0" prefWidth="88.0" styleClass="label-info" stylesheets="@css/dash.css" />
+                              <Label layoutX="22.0" layoutY="164.0" text="Type:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="mark_type" layoutX="99.0" layoutY="165.0" prefHeight="25.0" prefWidth="88.0" styleClass="label-info" stylesheets="@css/dash.css" />
+                              <Label layoutX="22.0" layoutY="207.0" text="Zh mark:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="mark_zh2_mark" layoutX="202.0" layoutY="205.0" prefHeight="25.0" prefWidth="42.0" styleClass="textfield" stylesheets="@css/dash.css" />
+                              <Button fx:id="mark_clear" layoutX="23.0" layoutY="259.0" mnemonicParsing="false" onAction="#setMark_clearOnAction" prefHeight="37.0" prefWidth="114.0" styleClass="clear-btn" stylesheets="@css/dash.css" text="Clear">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="mark_update" layoutX="154.0" layoutY="259.0" mnemonicParsing="false" onAction="#mark_zh_mark" prefHeight="37.0" prefWidth="115.0" styleClass="update-btn" stylesheets="@css/dash.css" text="Update">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="84.0" layoutY="207.0" prefHeight="21.0" prefWidth="30.0" text="ZH1" />
+                              <TextField fx:id="mark_zh1_mark" layoutX="113.0" layoutY="205.0" prefHeight="25.0" prefWidth="42.0" styleClass="textfield" stylesheets="@css/dash.css" />
+                              <Label layoutX="172.0" layoutY="207.0" prefHeight="21.0" prefWidth="30.0" text="ZH2" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="330.0" layoutY="14.0" prefHeight="432.0" prefWidth="347.0">
+                           <children>
+                              <TableView fx:id="mark_table" layoutX="6.0" layoutY="7.0" onMouseClicked="#addMarksSelect" prefHeight="446.0" prefWidth="338.0">
+                                <columns>
+                                  <TableColumn fx:id="mark_col_neptun" prefWidth="75.0" text="Neptun kod" />
+                                  <TableColumn fx:id="mark_col_zh1" prefWidth="46.0" text="Zh1" />
+                                    <TableColumn fx:id="mark_col_zh2" prefWidth="52.0" text="Zh2" />
+                                    <TableColumn fx:id="mark_col_sum" prefWidth="65.0" text="Sum" />
+                                    <TableColumn fx:id="mark_col_status" prefWidth="99.0" text="status" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

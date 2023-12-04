@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.RegisterController">
+   <children>
+      <AnchorPane prefHeight="85.0" prefWidth="520.0" styleClass="top" stylesheets="@css/registerStyle.css">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="63.0" layoutX="27.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/register.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="94.0" layoutY="27.0" prefHeight="32.0" prefWidth="192.0" text="User Registraion">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="94.0" layoutY="111.0" text="First Name">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstNameTxt" layoutX="94.0" layoutY="130.0" prefHeight="25.0" prefWidth="336.0" promptText="First name" />
+      <Label layoutX="94.0" layoutY="161.0" text="Last Name">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lastNameTxt" layoutX="94.0" layoutY="180.0" prefHeight="25.0" prefWidth="336.0" promptText="Last name" />
+      <Label layoutX="94.0" layoutY="212.0" text="User Name">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userNameTxt" layoutX="94.0" layoutY="230.0" prefHeight="25.0" prefWidth="336.0" promptText="User name" />
+      <Label layoutX="94.0" layoutY="266.0" text="Password">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="319.0" text="Confirm Password">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="registerBtn" layoutX="94.0" layoutY="445.0" mnemonicParsing="false" onAction="#registerBtnOnAction" prefHeight="25.0" prefWidth="336.0" style="-fx-background-color: #2DA2B6;" text="Register !!">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="closeBtn" layoutX="94.0" layoutY="481.0" mnemonicParsing="false" onAction="#closeBtnOnAction" prefHeight="25.0" prefWidth="336.0" style="-fx-background-color: #2DA2B6;" text="Close">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <PasswordField fx:id="passwordTxt" layoutX="94.0" layoutY="285.0" prefHeight="25.0" prefWidth="336.0" promptText="Password" />
+      <PasswordField fx:id="confirmTxt" layoutX="94.0" layoutY="337.0" prefHeight="25.0" prefWidth="336.0" promptText="Confirmation" />
+      <Label fx:id="registrationMessege" alignment="CENTER" layoutX="78.0" layoutY="94.0" prefHeight="17.0" prefWidth="367.0" textFill="#3aae63" />
+      <Label fx:id="confirmationMessege" layoutX="208.0" layoutY="320.0" prefHeight="17.0" prefWidth="104.0" textFill="#c33535" />
+      <Label fx:id="usernameMessege" layoutX="167.0" layoutY="213.0" prefHeight="17.0" prefWidth="289.0" textFill="#b91d1d" />
+      <Label layoutX="94.0" layoutY="368.0" text="Subject Name">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="subjectTxt" layoutX="94.0" layoutY="387.0" prefHeight="25.0" prefWidth="336.0" promptText="Subject name" />
+   </children>
+</AnchorPane>

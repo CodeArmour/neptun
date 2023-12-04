@@ -1,0 +1,29 @@
+package nye.hu.progTech.Storage
+
+plugins {
+    id 'java'
+    id 'jacoco'
+}
+
+jacoco {
+    // Jacoco configuration
+}
+
+plugins {
+    id 'java'
+}
+
+dependencies {
+    // Checkstyle dependency
+    checkstyleImplementation 'com.puppycrawl.tools:checkstyle:9.4.0'
+}
+
+checkstyle {
+    toolVersion = "9.4.0" // Checkstyle version
+    configFile = file("src/main/resources/checkstyle.xml") // Location of your Checkstyle configuration file
+}
+
+checkstyle {
+    configFile = file("src/main/resources/checkstyle.xml")
+    // Other configurations
+}
