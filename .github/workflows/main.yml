@@ -1,0 +1,26 @@
+name: 2023 Main java build pipeline
+
+on: [push]
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up java 11
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'adopt'
+          java-version: '17'
+      - name: Restore Maven cache
+        uses: skjolber/maven-cache-github-action@v1
+        with:
+          step: restore
+      - name: Compile NeptunClone
+        run: mvn compile
+      - name: Test NeptunClone
+        run: mvn test
+      - name: Save Maven cache
+        uses: skjolber/maven-cache-github-action@v1
+        with:
+          step: save
